@@ -19,7 +19,7 @@ import os
 
 from configs.Config_unet import get_config
 from datasets.example_dataset.create_splits import create_splits
-from datasets.utils import download_dataset
+#from datasets.utils import download_dataset
 from datasets.example_dataset.preprocessing import preprocess_data
 
 if __name__ == "__main__":
