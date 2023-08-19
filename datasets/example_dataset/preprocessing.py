@@ -28,9 +28,9 @@ from utilities.file_and_folder_operations import subfiles
 
 def preprocess_data(root_dir, y_shape=64, z_shape=64):
     image_dir = os.path.join(root_dir, 'imagesTr')
-    label_dir = os.path.join(root_dir, 'labelsTr')
+    #label_dir = os.path.join(root_dir, 'labelsTr')
     output_dir = os.path.join(root_dir, 'preprocessed')
-    classes = 3
+    classes = 37
 
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
@@ -39,15 +39,15 @@ def preprocess_data(root_dir, y_shape=64, z_shape=64):
     class_stats = defaultdict(int)
     total = 0
 
-    nii_files = subfiles(image_dir, suffix=".nii.gz", join=False)
+    nii_files = subfiles(image_dir, suffix="0001.nii.gz", join=False)
 
-    for i in range(0, len(nii_files)):
-        if nii_files[i].startswith("._"):
-            nii_files[i] = nii_files[i][2:]
+    #for i in range(0, len(nii_files)):
+        #if nii_files[i].startswith("._"):
+            #nii_files[i] = nii_files[i][2:]
 
     for f in nii_files:
         image, _ = load(os.path.join(image_dir, f))
-        label, _ = load(os.path.join(label_dir, f.replace('_0000', '')))
+        label, _ = load(os.path.join(image_dir, f.replace('0001.nii.gz', '0002.nii.gz')))
 
         print(f)
 

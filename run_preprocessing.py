@@ -25,9 +25,9 @@ from datasets.example_dataset.preprocessing import preprocess_data
 if __name__ == "__main__":
     c = get_config()
 
-    download_dataset(dest_path=c.data_root_dir, dataset=c.dataset_name, id=c.google_drive_id)
+    #download_dataset(dest_path=c.data_root_dir, dataset=c.dataset_name, id=c.google_drive_id)
 
-    print('Preprocessing data. [STARTED]')
+    #print('Preprocessing data. [STARTED]')
     preprocess_data(root_dir=os.path.join(c.data_root_dir, c.dataset_name))
     create_splits(output_dir=c.split_dir, image_dir=c.data_dir)
     print('Preprocessing data. [DONE]')

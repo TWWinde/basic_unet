@@ -28,7 +28,7 @@ def get_config():
         update_from_argv=True,  # If set 'True', it allows to update each configuration by a cmd/terminal parameter.
 
         # Train parameters
-        num_classes=3,
+        num_classes=37,
         in_channels=1,
         batch_size=8,
         patch_size=64,
@@ -50,18 +50,18 @@ def get_config():
         checkpoint_dir='',
 
         # Adapt to your own path, if needed.
-        google_drive_id='1RzPB1_bqzQhlWvU-YGvZzhx2omcDh38C',  # This id is used to download the example dataset.
-        dataset_name='Task04_Hippocampus',
-        base_dir=os.path.abspath('output_experiment'),  # Where to log the output of the experiment.
+        #google_drive_id='1RzPB1_bqzQhlWvU-YGvZzhx2omcDh38C',  # This id is used to download the example dataset.
+        dataset_name='autoPET',
+        base_dir=os.path.abspath('/no_backups/s1449/basic_unet/output_experiment'),  # Where to log the output of the experiment.
 
-        data_root_dir=data_root_dir,  # The path where the downloaded dataset is stored.
-        data_dir=os.path.join(data_root_dir, 'Task04_Hippocampus/preprocessed'),  # This is where your training and validation data is stored
-        data_test_dir=os.path.join(data_root_dir, 'Task04_Hippocampus/preprocessed'),  # This is where your test data is stored
+        data_root_dir='/misc/data/private/',  # The path where the downloaded dataset is stored.
+        data_dir=os.path.join(data_root_dir, 'autoPET/preprocessed'),  # This is where your training and validation data is stored
+        data_test_dir=os.path.join(data_root_dir, 'autoPET/preprocessed'),  # This is where your test data is stored
 
-        split_dir=os.path.join(data_root_dir, 'Task04_Hippocampus'),  # This is where the 'splits.pkl' file is located, that holds your splits.
+        split_dir=os.path.join(data_root_dir, 'autoPET'),  # This is where the 'splits.pkl' file is located, that holds your splits.
 
         # execute a segmentation process on a specific image using the model
-        model_dir=os.path.join(os.path.abspath('output_experiment'), ''),  # the model being used for segmentation
+        model_dir=os.path.join(os.path.abspath('output_experiment'), 'model'),  # the model being used for segmentation
     )
 
     print(c)
