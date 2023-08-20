@@ -15,8 +15,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from batchgenerators.transforms import Compose, MirrorTransform
-from batchgenerators.transforms.crop_and_pad_transforms import CenterCropTransform, RandomCropTransform
+from batchgenerators.transforms.abstract_transforms import Compose
+from batchgenerators.transforms.spatial_transforms import MirrorTransform
+#from batchgenerators.transforms.crop_and_pad_transforms import CenterCropTransform, RandomCropTransform
 from batchgenerators.transforms.spatial_transforms import ResizeTransform, SpatialTransform
 from batchgenerators.transforms.utility_transforms import NumpyToTensor
 
