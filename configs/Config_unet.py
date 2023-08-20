@@ -22,7 +22,7 @@ from trixi.util import Config
 
 def get_config():
     # Set your own path, if needed.
-    data_root_dir = os.path.abspath('data')  # The path where the downloaded dataset is stored.
+    data_root_dir = os.path.abspath('/misc/data/private/')  # The path where the downloaded dataset is stored.
 
     c = Config(
         update_from_argv=True,  # If set 'True', it allows to update each configuration by a cmd/terminal parameter.
