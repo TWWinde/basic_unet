@@ -21,7 +21,7 @@ import random
 
 import numpy as np
 
-from batchgenerators.dataloading import SlimDataLoaderBase
+from batchgenerators.dataloading.data_loader import SlimDataLoaderBase
 from datasets.data_loader import MultiThreadedDataLoader
 from .data_augmentation import get_transforms
 
