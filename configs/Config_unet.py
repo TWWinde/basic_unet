@@ -28,7 +28,7 @@ def get_config():
         update_from_argv=True,  # If set 'True', it allows to update each configuration by a cmd/terminal parameter.
 
         # Train parameters
-        num_classes=37,
+        num_classes=1,
         in_channels=1,
         batch_size=8,
         patch_size=64,
@@ -40,7 +40,7 @@ def get_config():
 
         # Logging parameters
         name='Basic_Unet',
-        author='kleina',  # Author of this project
+        author='wenwu',  # Author of this project
         plot_freq=10,  # How often should stuff be shown in visdom
         append_rnd_string=False,  # Appends a random string to the experiment name to make it unique.
         start_visdom=True,  # You can either start a visom server manually or have trixi start it for you.
@@ -51,11 +51,11 @@ def get_config():
 
         # Adapt to your own path, if needed.
         #google_drive_id='1RzPB1_bqzQhlWvU-YGvZzhx2omcDh38C',  # This id is used to download the example dataset.
-        dataset_name='autoPET',
-        base_dir=os.path.abspath('/no_backups/s1449/basic_unet/output_experiment'),  # Where to log the output of the experiment.
+        dataset_name='Duke_breast',
+        base_dir=os.path.abspath('/data/private/autoPET/medicaldiffusion_results'),  # Where to log the output of the experiment.
 
-        data_root_dir='/misc/data/private/',  # The path where the downloaded dataset is stored.
-        data_dir=os.path.join(data_root_dir, 'autoPET/preprocessed'),  # This is where your training and validation data is stored
+        data_root_dir='/data/private/autoPET/duke',  # The path where the downloaded dataset is stored.
+        data_dir=os.path.join(data_root_dir, '/final_labeled_mr'),  # This is where your training and validation data is stored
         data_test_dir=os.path.join(data_root_dir, 'autoPET/preprocessed'),  # This is where your test data is stored
 
         split_dir=os.path.join(data_root_dir, 'autoPET'),  # This is where the 'splits.pkl' file is located, that holds your splits.
